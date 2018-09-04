@@ -26,6 +26,9 @@
     <Compile Include="setup.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="WinevtJSON\main.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="WinevtJSON\__init__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -38,6 +41,8 @@
     <Folder Include="WinevtJSON\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
     <Content Include="LICENSE.txt" />
     <Content Include="README.md" />
   </ItemGroup>

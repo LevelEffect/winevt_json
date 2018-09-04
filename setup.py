@@ -1,4 +1,4 @@
-import setuptools, find_packages
+from setuptools import setup, find_packages
 from os import path
 
 here = path.abspath(path.dirname(__file__))
@@ -7,7 +7,7 @@ here = path.abspath(path.dirname(__file__))
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-setuptools.setup(
+setup(
     name="winevt_json",
     version="0.0.1",
     author="Rob Noeth",
@@ -28,7 +28,7 @@ setuptools.setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     
     # Required Packages
-    install_requires=['lxml', 'python-evtx'],
+    install_requires=['lxml', 'python-evtx', 'click'],
 
 
     # Console entry point
