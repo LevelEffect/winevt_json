@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="winevt_json",
-    version="0.0.1",
+    version="0.1.2",
     author="Rob Noeth",
     author_email="oss@leveleffect.com",
     description="A utility to convert windows system event logs into json objects.",
@@ -19,7 +19,7 @@ setup(
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
-        "Topic :: Software Development :: infosec :: Forensics :: Threat Hunting"
+        "Topic :: System :: Logging",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -28,7 +28,11 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     
     # Required Packages
-    install_requires=['lxml', 'python-evtx', 'click'],
+    install_requires=[
+        'click>=6'
+        'lxml>=4', 
+        'python-evtx<1', 
+        ],
 
 
     # Console entry point
